@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  --themeColor: #fb4760;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Figtree", system-ui;
+}
+
+a,
+button {
+  transition: all 0.3s linear;
+}
+
+.bg-theme {
+  background: var(--themeColor);
+}
+
+.text-theme {
+  color: var(--themeColor);
+}
+
+.border-theme {
+  border-color: var(--themeColor);
+}
+
+.white-filter {
+  filter: brightness(0) invert(1);
+}
+
+.hover\:text-theme:hover {
+  color: var(--themeColor);
+}
+
+.hover\:bg-theme:hover {
+  background: var(--themeColor);
+}
+
+.hover\:border-theme:hover {
+  border-color: var(--themeColor);
+}
+
+.mb-neg-1 {
+  margin-bottom: -0.5rem;
+}
+
+.mobile-code-input input:focus {
+  outline: 0;
+}
+
+.vertical-scrollbar-theme::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.vertical-scrollbar-theme::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+.vertical-scrollbar-theme::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--themeColor);
+}
+
+/*! PACKAGE CARDS */
+.package-card-type-1 img {
+  aspect-ratio: 1/1.5;
+}
+
+.package-card-type-2 img,
+.package-card-type-3 img {
+  aspect-ratio: 1/0.5;
+}
+
+.theme-card img {
+  aspect-ratio: 1/1.3;
+}
+
+.alice-white-icons .alice-carousel__prev-btn,
+.alice-white-icons .alice-carousel__next-btn {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.alice-white-icons .alice-carousel__prev-btn {
+  left: 0;
+  transform: translate(-12px, -50%) rotate(-135deg);
+}
+
+.alice-white-icons .alice-carousel__next-btn {
+  right: 0;
+  transform: translate(12px, -50%) rotate(45deg);
+}
+
+.alice-white-icons .alice-carousel__prev-btn-item,
+.alice-white-icons .alice-carousel__next-btn-item {
+  padding: 0;
+}
+
+.alice-white-icons .alice-carousel__prev-btn span,
+.alice-white-icons .alice-carousel__next-btn span {
+  color: transparent;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  display: block;
+}
+
+.alice-white-icons .alice-carousel__prev-btn::after,
+.alice-white-icons .alice-carousel__next-btn::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -35%);
+  content: "";
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+  border-top: 2px solid var(--themeColor);
+  border-right: 2px solid var(--themeColor);
+}
+
+.css-1p3m7a8-multiValue {
+  background: #21212110 !important;
+}
+
+.password-field .icon {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/*! HEADER */
+header .logo img {
+  width: 160px;
+}
+
+header .right-links .icon {
+  width: 30px;
+  height: 30px;
+}
+
+/*! HOME */
+#home-banner .overlay-container {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+#home-banner .image img {
+  min-height: 500px;
+}
+
+.holiday-form {
+  grid-template-columns: 1fr 200px;
+}
+
+#benefits .benefit-block {
+  grid-template-columns: 70px 1fr;
+}
+
+#benefits .benefit-block .icon {
+  width: 70px;
+  height: 70px;
+}
+
+#home-mid-banner img {
+  max-height: 500px;
+}
+
+.home-tab-scroll::-webkit-scrollbar {
+  height: 5px;
+}
+
+.home-tab-scroll::-webkit-scrollbar-thumb {
+  background: #585858;
+  border-radius: 10px;
+}
+
+.home-tab-scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/*! HOTEL DETAILS PAGE */
+#holiday-details-page .holiday-details,
+#book-now-page {
+  grid-template-columns: calc(100% - 370px) 1fr;
+}
+
+#holiday-details-page .holiday-details .left-block {
+  max-width: calc(100vw - 32px);
+}
+
+#holiday-details-page .day-block .top-grid {
+  grid-template-columns: 150px 1fr;
+}
+
+#book-now-page .review-box .top-grid {
+  grid-template-columns: 200px 1fr;
+}
+
+#holiday-details-page .pad-start-head::after {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  content: "";
+  width: 7px;
+  border-radius: 0 10px 10px 0;
+}
+
+#holiday-details-page .pad-start-head.inclusion::after {
+  background: #6CAF68;
+}
+
+#holiday-details-page .pad-start-head.exclusion::after {
+  background: #F67375;
+}
+
+#holiday-details-page .highlights img {
+  aspect-ratio: 1/0.5;
+}
+
+#holiday-details-page .transparent-border:not(.border-sky-600) {
+  border-color: transparent;
+}
+
+#holiday-details-page .alice-white-icons .alice-carousel__prev-btn,
+#holiday-details-page .alice-white-icons .alice-carousel__next-btn {
+  top: 100px;
+}
+
+/*! FOOTER */
+footer .logo img {
+  width: 160px;
+}
+
+footer .social a {
+  width: 35px;
+  height: 35px;
+}
+
+footer .newsletter {
+  max-width: 500px;
+}
+
+/*! FLIGHT TICKET */
+.flight-ticket .left-block::before,
+.flight-ticket .left-block::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--white);
+  z-index: 2;
+}
+
+.flight-ticket .left-block::before {
+  top: 0;
+  transform: translate(50%, -2rem);
+}
+
+.flight-ticket .left-block::after {
+  bottom: 0;
+  transform: translate(50%, 2rem);
+}
+
+/*! NOT FOUND PAGE */
+#not-found-page img {
+  max-width: 400px;
+}
+
+@media screen and (min-width: 1024px) {
+  header .mid-links .link-item::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--themeColor);
+    content: "";
+    transform: translate(-50%, 5px);
+    border-radius: 5px;
+    transition: all 0.3s linear;
+  }
+
+  header .mid-links .link-item:hover::after {
+    width: 70%;
+  }
+
+  header .dropdown .drop-list {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header .mid-links {
+    max-width: 350px;
+    width: 100%;
+    transform: translate(100%, 0);
+    transition: all 0.2s linear;
+  }
+
+  header .mid-links.active {
+    transform: translate(0, 0);
+  }
+
+  .alice-white-icons .alice-carousel__prev-btn,
+  .alice-white-icons .alice-carousel__next-btn {
+    display: none;
+  }
+
+  #holiday-details-page .holiday-details,
+  #book-now-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #holiday-details-page .holiday-gallery {
+    grid-template-columns: calc(100% - 370px) 1fr 1fr;
+    grid-template-rows: 125px 125px 125px;
+    grid-template-areas:
+      "big1 top1 top1"
+      "big1 center2 center3"
+      "big1 bottom1 bottom1";
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .holiday-form,
+  #holiday-details-page .day-block .top-grid,
+  #book-now-page .review-box .top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #holiday-details-page .holiday-gallery img {
+    aspect-ratio: 1/0.8;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+  .package-card-type-2 .main-title,
+  .package-card-type-3 .main-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+  header .logo img,
+  footer .logo img {
+    width: 130px;
+  }
+
+  footer .social a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .flight-ticket .left-block::before,
+  .flight-ticket .left-block::after {
+    bottom: 0;
+    top: initial;
+  }
+
+  .flight-ticket .left-block::before {
+    left: 0;
+    transform: translate(-2rem, 50%);
+  }
+
+  .flight-ticket .left-block::after {
+    right: 0;
+    transform: translate(2rem, 50%);
+  }
+}

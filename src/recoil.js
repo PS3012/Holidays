@@ -1,20 +1,13 @@
 import { atom } from "recoil";
 
-const APP_NAME = import.meta.env.VITE_APP_NAME;
-
-const baseApiUrl = atom({
-  key: "apiUrl",
-  default: `http://160.25.62.168${APP_NAME}`,
-});
-
 const appName = atom({
   key: "prefixAppName",
-  default: APP_NAME,
+  default: "",
 });
 
 const originURL = atom({
   key: "origin",
-  default: `${location.origin}${APP_NAME}`,
+  default: `${location.origin}`,
 });
 
 const bookNowUser = atom({
@@ -30,4 +23,4 @@ const bookNowUser = atom({
   },
 });
 
-export { originURL, bookNowUser, baseApiUrl, appName };
+export { originURL, bookNowUser, appName };

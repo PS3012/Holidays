@@ -3,7 +3,7 @@ import { useRecoilState } from "recoil"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import { FaBars, FaHeadset } from "react-icons/fa"
 import { BiSolidPhoneCall, BiSolidUserCircle } from "react-icons/bi"
-import { appName, baseApiUrl, originURL } from "../recoil"
+import { appName, originURL } from "../recoil"
 import { MdOutlineClose } from "react-icons/md"
 import { headerMenu } from "../StaticData"
 
@@ -11,25 +11,9 @@ function Header() {
      const location = useLocation()
      const navigate = useNavigate()
      const [origin] = useRecoilState(originURL)
-     const [apiUrl] = useRecoilState(baseApiUrl)
      const [prefixAppName] = useRecoilState(appName)
-     const [headerData, setHeaderData] = useState(headerMenu)
      const [isActiveMobileSlide, setIsActiveMobileSlide] = useState(false)
      const [scroll, setScroll] = useState(false)
-     useEffect(() => {
-          const fetchHeaderData = async () => {
-               try {
-                    const response = await fetch(`${apiUrl}/jsondata/headermenu`);
-                    if (!response.ok) throw new Error("Network response was not ok");
-                    const result = await response.json();
-                    setHeaderData(result.headermenu)
-               } catch (error) {
-                    console.error("Error fetching header data:", error);
-                    return [];
-               }
-          }
-          // fetchHeaderData()
-     }, [apiUrl])
      useEffect(() => {
           if (location.pathname === `${prefixAppName}/`) {
                navigate(prefixAppName)
@@ -59,7 +43,7 @@ function Header() {
                                    <div className="text-2xl" onClick={() => setIsActiveMobileSlide(false)}><MdOutlineClose /></div>
                               </div>
                               <div className="grid lg:flex lg:items-center lg:justify-center gap-3">
-                                   {headerData?.map((menu, key) => menu.status === "active" &&
+                                   {headerMenu?.map((menu, key) => menu.status === "active" &&
                                         <Link key={key}
                                              to={menu.identifier ? `${prefixAppName}/${menu.identifier}` : prefixAppName}
                                              onClick={() => setIsActiveMobileSlide(false)}

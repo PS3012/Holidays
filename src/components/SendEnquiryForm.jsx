@@ -7,7 +7,7 @@ import InputField from './DataFields/InputField';
 import SelectField from './DataFields/SelectField';
 import InputDate from './DataFields/InputDate';
 import InputMobile from './DataFields/InputMobile';
-import { isPhoneValid } from './otherFunctions';
+import { isPhoneValid } from './OtherFunctions';
 
 function SendEnquiryForm() {
      const navigate = useNavigate()

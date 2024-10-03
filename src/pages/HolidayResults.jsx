@@ -7,7 +7,7 @@ import makeAnimated from 'react-select/animated';
 import { internationalPackages } from "../StaticData";
 import HolidaySearchForm from "../components/HolidaySearchForm";
 import PackageCardType3 from "../components/PackageCardType3";
-import { capitalizeWords } from "../components/otherFunctions";
+import { capitalizeWords } from "../components/OtherFunctions";
 import { useParams } from "react-router-dom";
 import PackageCardType3Skeleton from "../components/PackageCardType3Skeleton";
 

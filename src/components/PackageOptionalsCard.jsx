@@ -1,7 +1,7 @@
 import { useRecoilState } from "recoil"
 import { originURL } from "../recoil"
 import EllipsisText from "./EllipsisText"
-import { capitalizeWords } from "./otherFunctions"
+import { capitalizeWords } from "./OtherFunctions"
 
 function PackageOptionalsCard(_props) {
      const [origin] = useRecoilState(originURL)

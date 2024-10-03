@@ -7,7 +7,7 @@ import PasswordField from "../components/DataFields/PasswordField"
 import InputField from "../components/DataFields/InputField"
 import SelectField from "../components/DataFields/SelectField"
 import InputMobile from "../components/DataFields/InputMobile"
-import { isPhoneValid } from "../components/otherFunctions"
+import { isPhoneValid } from "../components/OtherFunctions"
 
 function Register() {
      const [prefixAppName] = useRecoilState(appName)

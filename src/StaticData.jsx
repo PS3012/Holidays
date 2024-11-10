@@ -33,22 +33,13 @@ export const internationalPackages = [
           destination: "Malaysia",
      },
      {
-          image: "/images/package/europe.jpg",
-          destination: "Europe",
+          image: "/images/package/paris.jpg",
+          destination: "Paris",
      },
      {
           image: "/images/package/maldives.jpg",
           destination: "Maldives",
      },
-]
-
-export const themes = [
-     { image: "/images/theme/culture.jpg", title: "Culture" },
-     { image: "/images/theme/adventure.jpg", title: "Adventure" },
-     { image: "/images/theme/honeymoon.jpg", title: "Honeymoon" },
-     { image: "/images/theme/wildlife.jpg", title: "Wildlife" },
-     { image: "/images/theme/offbeat.jpg", title: "Offbeat" },
-     { image: "/images/theme/pilgrimage.jpg", title: "Pilgrimage" },
 ]
 
 export const nightPackages = ["Up To 3 Nights", "4-6 Nights", "7-10 Nights", "11-15 Nights", "Above 16 Nights"]
@@ -65,25 +56,6 @@ export const footerBlocks = [
                { title: "Travelogue", link: "#" },
                { title: "Terms Of Use", link: "#" },
                { title: "Pay online", link: "#" },
-          ]
-     }, {
-          head: "Destinations",
-          links: [
-               { title: "Kevadia", link: "#" },
-               { title: "Statue of Unity", link: "#" },
-               { title: "Gold Coast", link: "#" },
-               { title: "Dubai", link: "#" },
-               { title: "Bangkok", link: "#" },
-               { title: "Abu Dhabi", link: "#" }
-          ]
-     }, {
-          head: "Tours By Category",
-          links: [
-               { title: "Beach", link: "#" },
-               { title: "Wildlife", link: "#" },
-               { title: "Adventure", link: "#" },
-               { title: "Honeymoon", link: "#" },
-               { title: "Culture", link: "#" }
           ]
      }
 ]
@@ -186,7 +158,7 @@ export const holidayDetails = {
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
                     {
-                         image: "/images/package/europe.jpg",
+                         image: "/images/package/paris.jpg",
                          title: "Marina Dhow Cruise",
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
@@ -214,7 +186,7 @@ export const holidayDetails = {
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
                     {
-                         image: "/images/package/europe.jpg",
+                         image: "/images/package/paris.jpg",
                          title: "Marina Dhow Cruise",
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
@@ -241,7 +213,7 @@ export const holidayDetails = {
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
                     {
-                         image: "/images/package/europe.jpg",
+                         image: "/images/package/paris.jpg",
                          title: "Marina Dhow Cruise",
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
@@ -260,7 +232,7 @@ export const holidayDetails = {
           },
           {
                title: "City Tour of Phuket",
-               image: "/images/package/europe.jpg",
+               image: "/images/package/paris.jpg",
                overview: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
                sightseeing: [
                     {
@@ -269,7 +241,7 @@ export const holidayDetails = {
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
                     {
-                         image: "/images/package/europe.jpg",
+                         image: "/images/package/paris.jpg",
                          title: "Marina Dhow Cruise",
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
@@ -296,7 +268,7 @@ export const holidayDetails = {
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
                     {
-                         image: "/images/package/europe.jpg",
+                         image: "/images/package/paris.jpg",
                          title: "Marina Dhow Cruise",
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
@@ -324,7 +296,7 @@ export const holidayDetails = {
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
                     {
-                         image: "/images/package/europe.jpg",
+                         image: "/images/package/paris.jpg",
                          title: "Marina Dhow Cruise",
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
@@ -351,7 +323,7 @@ export const holidayDetails = {
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
                     {
-                         image: "/images/package/europe.jpg",
+                         image: "/images/package/paris.jpg",
                          title: "Marina Dhow Cruise",
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
@@ -379,7 +351,7 @@ export const holidayDetails = {
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
                     {
-                         image: "/images/package/europe.jpg",
+                         image: "/images/package/paris.jpg",
                          title: "Marina Dhow Cruise",
                          description: "Famed as the supreme center of art and dance, Ubud is the heart of Bali. The region is all over surrounded by lush green trails of rice fields and the best way to gape at this beauty is from the Bali swing in Ubud. From here you can swing at a height of almost 33 feet to 256 feet which is fair enough to multiply the charm of the greens. Apart from this, it’s topography is also dotted with several Hindu temples which are an abode of serenity and the landscapes will truly melt your heart away. Bali swing in Ubud is truly a place for nature and adventure lovers alike, as here you can pose at the rocks or just enjoy the perfect frames of the cascading falls. Ubud also boasts with a remarkable count of holy centers which include Gunung Kawi, Elephant cave, and several other places. If you are planning out a trip with your partner or with family, this is indeed a choice with no regrets and welcomes all kinds of travelers with open arms. The cool mountains, paddy fields, and soothing vibes of this upland area just perfect for splendid vacations."
                     },
@@ -457,34 +429,6 @@ export const headerMenu = [
           "orders": 1,
           "types": 1,
           "tab": null,
-          "dropmenuname": null,
-          "dropmenuurl": null,
-          "AgencySysId": 128462
-     },
-     {
-          "id": 10,
-          "title": "Top Regions",
-          "links": "",
-          "identifier": "top-regions",
-          "status": "active",
-          "displayOnMenu": 1,
-          "orders": 4,
-          "types": 1,
-          "tab": null,
-          "dropmenuname": null,
-          "dropmenuurl": null,
-          "AgencySysId": 128462
-     },
-     {
-          "id": 7,
-          "title": "Blogs",
-          "links": "",
-          "identifier": "",
-          "status": "active",
-          "displayOnMenu": 1,
-          "orders": 7,
-          "types": 2,
-          "tab": 1,
           "dropmenuname": null,
           "dropmenuurl": null,
           "AgencySysId": 128462

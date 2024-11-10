@@ -2,15 +2,13 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link, useNavigate } from "react-router-dom"
 import { TbMapSearch } from "react-icons/tb"
-import { defaultCountries } from '../StaticData'
 import HolidayInputBox from './HolidayInputBox'
 import toast from 'react-hot-toast'
-import { useRecoilState } from 'recoil'
-import { appName } from '../recoil'
+import { useSelector } from 'react-redux';
 
 function HolidaySearchForm(_props) {
      const navigate = useNavigate()
-     const [prefixAppName] = useRecoilState(appName)
+     const { destinations: defaultDestinations } = useSelector(state => state.defaultDestinations)
      const [loading, setLoading] = useState(false)
      const [destination, setDestination] = useState(_props.selectedDestination || "")
      const formVariants = {
@@ -35,7 +33,7 @@ function HolidaySearchForm(_props) {
                setLoading(true)
                setTimeout(() => {
                     setLoading(false)
-                    navigate(`${prefixAppName}/tour-destination/${destination.split(" ").join("-").toLowerCase()}`)
+                    navigate(`/tour-destination/${destination.split(" ").join("-").toLowerCase()}`)
                }, 2000);
           } else {
                toast.error("Enter the destination first.")
@@ -58,15 +56,15 @@ function HolidaySearchForm(_props) {
                               <span>Show Holidays</span><TbMapSearch className="text-lg" />
                          </button>
                     </form>
-                    {_props.showSuggestions &&
+                    {_props.showSuggestions && defaultDestinations && defaultDestinations.length > 0 &&
                          <div className="flex flex-wrap gap-3">
-                              {defaultCountries.map((country, index) => (
+                              {defaultDestinations.map((item, index) => (
                                    <motion.div
-                                        key={index}
+                                        key={item.id}
                                         variants={linkVariants}
                                         custom={index + 1}
                                    >
-                                        <Link to={`${prefixAppName}/tour-destination/${country.split(" ").join("-").toLowerCase()}`} className="border text-sm text-white px-2 py-1 rounded hover:bg-theme hover:border-theme">{country}</Link>
+                                        <Link to={`/tour-destination/${item.destination.split(" ").join("-").toLowerCase()}`} className="border text-sm text-white px-2 py-1 rounded hover:bg-theme hover:border-theme">{item.destination}</Link>
                                    </motion.div>
                               ))}
                          </div>

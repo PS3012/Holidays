@@ -2,7 +2,6 @@ import { useState } from "react"
 import parse from "html-react-parser"
 import AliceCarousel from "react-alice-carousel"
 import Scroll from 'react-scroll';
-import { useRecoilState } from "recoil"
 import { MdDoubleArrow, MdOutlineFlight } from "react-icons/md"
 import { GiCheckMark, GiHotMeal } from "react-icons/gi"
 import { GoTelescope } from "react-icons/go"
@@ -15,11 +14,9 @@ import EllipsisText from "../components/EllipsisText"
 import SendEnquiryForm from "../components/SendEnquiryForm"
 import PackageCardType3 from "../components/PackageCardType3"
 import FlightTicket from "../components/FlightTicket"
-import { appName } from "../recoil"
 import PackageOptionalsCard from "../components/PackageOptionalsCard";
 
 function HolidayDetails() {
-     const [prefixAppName] = useRecoilState(appName)
      const detailsTab = ["Overview", "Highlights", "Package Details", "Optionals", "Inclusions/Exclusions", "Terms & Conditions"]
      const [activeDay, setActiveDay] = useState()
      const [policyTabs, setPolicyTabs] = useState(0)
@@ -260,7 +257,7 @@ function HolidayDetails() {
                                                   items={holidayDetails.highlights.map((highlight, idx) =>
                                                        <div className="px-2 py-4" key={idx}>
                                                             <div className="image mb-2">
-                                                                 <img src={`${prefixAppName}${highlight.image}`} alt="Highlight" className="w-full rounded object-cover shadow" />
+                                                                 <img src={highlight.image} alt="Highlight" className="w-full rounded object-cover shadow" />
                                                             </div>
                                                             <div className="text-lg font-bold mb-1">{idx + 1}. {highlight.title}</div>
                                                             <div className="text-sm text-gray-600 font-medium"><EllipsisText text={highlight.content} initialShow={100} /></div>

@@ -1,0 +1,12 @@
+npm i react-router-dom
+npm i framer-motion
+npm i react-icons
+npm i html-react-parser
+npm i react-alice-carousel
+npm i react-hot-toast
+npm i react-select
+npm i react-scroll
+npm i react-phone-number-input
+npm i react-tailwindcss-datepicker
+npm i redux react-redux @reduxjs/toolkit
+npm install firebase

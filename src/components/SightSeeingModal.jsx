@@ -1,10 +1,8 @@
 import { IoClose } from "react-icons/io5"
-import { useRecoilState } from "recoil"
-import { originURL } from "../recoil"
 
 function SightSeeingModal(_props) {
+     const { origin } = location
      const { data, onCloseModal } = _props
-     const [origin] = useRecoilState(originURL)
      return (
           <>
 

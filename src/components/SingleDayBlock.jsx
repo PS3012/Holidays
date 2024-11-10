@@ -2,13 +2,10 @@ import { motion, AnimatePresence } from "framer-motion"
 import { GiHotMeal } from "react-icons/gi"
 import { GoTelescope } from "react-icons/go"
 import { IoChevronDown, IoChevronUp } from "react-icons/io5"
-import { useRecoilState } from "recoil"
-import { appName } from "../recoil"
 import { useState } from "react"
 import SightSeeingModal from "./SightSeeingModal"
 
 function SingleDayBlock(_props) {
-     const [prefixAppName] = useRecoilState(appName)
      const [sightModal, setSightModal] = useState({})
      const words = _props.overview.split(' ');
      const pillVariants = {
@@ -42,7 +39,7 @@ function SingleDayBlock(_props) {
                               <div className="p-3 overflow-hidden">
                                    <div className="grid top-grid items-start gap-3 mb-4">
                                         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}>
-                                             <img src={`${prefixAppName}${_props.image}`} alt={`Day ${_props.index + 1}`} className="w-full aspect-square object-cover rounded shadow-lg" />
+                                             <img src={_props.image} alt={`Day ${_props.index + 1}`} className="w-full aspect-square object-cover rounded shadow-lg" />
                                         </motion.div>
                                         <div className="flex flex-wrap items-center">
                                              {words.map((word, wordIndex) => (

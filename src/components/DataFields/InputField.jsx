@@ -1,7 +1,7 @@
 import FieldLabel from "./FieldLabel"
 
 function InputField(_props) {
-     const { containerClass, label, type, placeholder, fieldType, value, updateValue, error, errorMessage } = _props
+     const { containerClass, label, type, placeholder, fieldType, value, updateValue, error, errorMessage, required } = _props
      const handleUpdate = (e) => {
           updateValue(e.target.value)
      }
@@ -9,7 +9,7 @@ function InputField(_props) {
           <>
 
                <div className={containerClass ? containerClass : ""}>
-                    <FieldLabel label={label} />
+                    <FieldLabel label={label} required={required} />
                     <input
                          type={type}
                          value={value}

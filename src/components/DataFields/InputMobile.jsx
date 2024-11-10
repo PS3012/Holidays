@@ -2,12 +2,12 @@ import { PhoneInput } from 'react-international-phone';
 import FieldLabel from './FieldLabel'
 
 function InputMobile(_props) {
-     const { containerClass, label, placeholder, fieldType, value, updateValue, error, errorMessage } = _props
+     const { containerClass, label, placeholder, fieldType, value, updateValue, error, errorMessage, required } = _props
      return (
           <>
 
                <div className={containerClass ? containerClass : ""}>
-                    <FieldLabel label={label} />
+                    <FieldLabel label={label} required={required} />
                     <PhoneInput
                          defaultCountry="in"
                          placeholder={placeholder}

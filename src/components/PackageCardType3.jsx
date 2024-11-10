@@ -4,12 +4,9 @@ import { GiCheckMark } from "react-icons/gi"
 import { IoCarSportOutline, IoLogoWhatsapp } from "react-icons/io5"
 import { LiaHotelSolid } from "react-icons/lia"
 import { PiMapPinSimpleAreaFill } from "react-icons/pi"
-import { useRecoilState } from "recoil"
-import { appName, originURL } from "../recoil"
 
 function PackageCardType3(_props) {
-     const [origin] = useRecoilState(originURL)
-     const [prefixAppName] = useRecoilState(appName)
+     const { origin } = location
      return (
           <>
 
@@ -42,7 +39,7 @@ function PackageCardType3(_props) {
                          <div className="grid grid-cols-5 gap-2 items-end">
                               <div className="col-span-3">
                                    <div className="mb-neg-1">
-                                        <div className="inline-block bg-black px-3 py-1 rounded text-xs text-white">Package Includes</div>
+                                        <div className="inline-block bg-black px-3 py-1 rounded text-xs text-white">Package Themes</div>
                                    </div>
                                    <div className="bg-slate-200 px-2 pb-2 pt-4 rounded max-h-20 overflow-y-auto vertical-scrollbar-theme">
                                         <div className="flex gap-2 items-center text-xs mb-1">
@@ -76,10 +73,10 @@ function PackageCardType3(_props) {
                                    <div className="text-xs text-slate-500 mb-1">Avg. Price / Person</div>
                                    <div className="text-xs font-semibold mb-2">Total INR 20,000</div>
                                    <div className="flex items-center justify-end gap-2">
-                                        <Link to={`${prefixAppName}`}>
+                                        <Link to="#">
                                              <IoLogoWhatsapp className="w-7 h-7 block leading-7 text-center rounded-full text-white bg-green-600" />
                                         </Link>
-                                        <Link to={`${prefixAppName}/holidays-details`} className={`bg-theme hover:bg-black inline-block text-sm text-white rounded py-1 px-3`}>View Deal</Link>
+                                        <Link to={`/holidays-details`} className={`bg-theme hover:bg-black inline-block text-sm text-white rounded py-1 px-3`}>View Deal</Link>
                                    </div>
                               </div>
                          </div>

@@ -1,10 +1,8 @@
-import { useRecoilState } from "recoil"
-import { originURL } from "../recoil"
 import EllipsisText from "./EllipsisText"
 import { capitalizeWords } from "./OtherFunctions"
 
 function PackageOptionalsCard(_props) {
-     const [origin] = useRecoilState(originURL)
+     const { origin } = location
      const { data: { id, image, title, description, category, inclusion, duration, sightSeeingType, price, pickUp, drop }, handleSelectedAddOn, isSelected } = _props
      return (
           <>

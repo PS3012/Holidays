@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom"
 import { FaStar } from "react-icons/fa"
 import { FcCalendar } from "react-icons/fc"
-import { useRecoilState } from "recoil"
-import { appName, originURL } from "../recoil"
 
 function PackageCardType2(_props) {
-     const [origin] = useRecoilState(originURL)
-     const [prefixAppName] = useRecoilState(appName)
+     const { origin } = location
      return (
           <>
 
@@ -37,7 +34,7 @@ function PackageCardType2(_props) {
                                         <div className="text-sm text-slate-500">Avg. Price / Person</div>
                                         <div className="text-sm font-semibold">Total INR 20,000</div>
                                    </div>
-                                   <Link to={`${prefixAppName}/holidays-details`} className="bg-theme hover:bg-black text-sm text-white px-3 py-1 rounded shadow">View Deal</Link>
+                                   <Link to={`/holidays-details`} className="bg-theme hover:bg-black text-sm text-white px-3 py-1 rounded shadow">View Deal</Link>
                               </div>
                          </div>
                     </div>

@@ -1,8 +1,6 @@
-import { useRecoilState } from "recoil"
-import { originURL } from "../recoil"
 
 function FlightTicket() {
-     const [origin] = useRecoilState(originURL)
+     const { origin } = location
      return (
           <>
 

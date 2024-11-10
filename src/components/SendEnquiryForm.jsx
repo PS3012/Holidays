@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
 import toast from 'react-hot-toast';
-import { appName, bookNowUser } from '../recoil';
 import InputField from './DataFields/InputField';
 import SelectField from './DataFields/SelectField';
 import InputDate from './DataFields/InputDate';
@@ -11,8 +9,7 @@ import { isPhoneValid } from './OtherFunctions';
 
 function SendEnquiryForm() {
      const navigate = useNavigate()
-     const [prefixAppName] = useRecoilState(appName)
-     const [user, setUser] = useRecoilState(bookNowUser)
+     const [user, setUser] = useState({})
      const [formStep, setFormStep] = useState(1)
      const [loading, setLoading] = useState(false)
      const [formErrors, setFormErrors] = useState({})
@@ -59,7 +56,7 @@ function SendEnquiryForm() {
      const handleBookNow = (e) => {
           e.preventDefault();
           if (validateFormFields()) {
-               navigate(`${prefixAppName}/book-now`)
+               navigate(`/book-now`)
           }
      }
 

@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { useRecoilState } from "recoil"
 import { MdDoubleArrow } from "react-icons/md"
 import { BiSolidPlaneAlt } from "react-icons/bi"
 import { LiaHotelSolid } from "react-icons/lia"
@@ -10,7 +9,6 @@ import { IoMdCloudyNight } from "react-icons/io"
 import { HiOutlineCalendarDays } from "react-icons/hi2"
 import BreadCrumb from "../components/BreadCrumb"
 import { holidayDetails } from "../StaticData"
-import { appName, bookNowUser } from "../recoil"
 import InputCheckBox from "../components/DataFields/InputCheckBox"
 import Timer from "../components/Timer"
 import InputMobile from "../components/DataFields/InputMobile"
@@ -19,8 +17,7 @@ import SelectField from "../components/DataFields/SelectField"
 import InputDate from "../components/DataFields/InputDate"
 
 function BookNow() {
-     const [prefixAppName] = useRecoilState(appName)
-     const [user, setUser] = useRecoilState(bookNowUser)
+     const [user, setUser] = useState({})
      const [formErrors, setFormErrors] = useState({})
      const [onTimeEnd, setOnTimeEnd] = useState(false)
      const [bookingData, setBookingData] = useState({ payment: "Deposit" })
@@ -72,7 +69,7 @@ function BookNow() {
                               <div className="review-box p-4 border rounded shadow">
                                    <div className="top-grid grid gap-4 items-center pb-4 border-b border-zinc-300">
                                         <div className="image">
-                                             <img src={`${prefixAppName}/images/package/dubai.jpg`} alt="Package" className="w-full object-cover rounded shadow-lg aspect-video" />
+                                             <img src={`/images/package/dubai.jpg`} alt="Package" className="w-full object-cover rounded shadow-lg aspect-video" />
                                         </div>
                                         <div className="details">
                                              <div className="text-2xl font-bold mb-1">{holidayDetails.title}</div>
@@ -139,7 +136,7 @@ function BookNow() {
                                    </div>
                                    <InputCheckBox checkFor="agreeConsentNotice" value={bookingData.agreeConsentNotice} updateValue={(val) => updateBookingDetails("agreeConsentNotice", val)}>
                                         I agree to receive marketing emails, offers and promotions from Crystal Travels.&nbsp;
-                                        <Link to={`${prefixAppName}`} className="text-sm text-sky-500 border-b-2 font-semibold hover:border-sky-500">(Consent Notice)</Link>
+                                        <Link to="#" className="text-sm text-sky-500 border-b-2 font-semibold hover:border-sky-500">(Consent Notice)</Link>
                                    </InputCheckBox>
                               </div>
                          </div>
@@ -386,9 +383,9 @@ function BookNow() {
                          <div className="mb-4">
                               <InputCheckBox checkFor="agreeBooking" value={bookingData.agreeBooking} updateValue={(val) => updateBookingDetails("agreeBooking", val)}>
                                    By clicking make payment, I agree that I have read the above mentioned Booking Terms & Conditions including&nbsp;
-                                   <Link to={`${prefixAppName}`} className="text-sm text-sky-500 border-b-2 font-semibold hover:border-sky-500">Refund and Cancellation Charges</Link>.&nbsp;
+                                   <Link to="#" className="text-sm text-sky-500 border-b-2 font-semibold hover:border-sky-500">Refund and Cancellation Charges</Link>.&nbsp;
                                    I also confirm that I have read & accepted the&nbsp;
-                                   <Link to={`${prefixAppName}`} className="text-sm text-sky-500 border-b-2 font-semibold hover:border-sky-500">Terms & Conditions</Link>.&nbsp;
+                                   <Link to="#" className="text-sm text-sky-500 border-b-2 font-semibold hover:border-sky-500">Terms & Conditions</Link>.&nbsp;
                               </InputCheckBox>
                          </div>
                          <div>

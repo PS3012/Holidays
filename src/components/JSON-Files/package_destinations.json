@@ -140,6 +140,26 @@
     "ContId": 14
   },
   {
+    "label": "Malaysia",
+    "value": "Malaysia",
+    "code": "",
+    "id": "34",
+    "TypeTitle": "country",
+    "countryCode": "AT",
+    "countryName": "Malaysia",
+    "ContId": 34
+  },
+  {
+    "label": "Maldives",
+    "value": "Maldives",
+    "code": "",
+    "id": "79",
+    "TypeTitle": "country",
+    "countryCode": "AT",
+    "countryName": "Maldives",
+    "ContId": 79
+  },
+  {
     "label": "Orient",
     "value": "Orient",
     "code": "",
@@ -838,16 +858,6 @@
     "countryCode": "UK",
     "countryName": "UNITED KINGDOM",
     "ContId": 469
-  },
-  {
-    "label": "Ladakh (India)",
-    "value": "Ladakh",
-    "code": "",
-    "id": "34296",
-    "TypeTitle": "city",
-    "countryCode": "IN",
-    "countryName": "India",
-    "ContId": 101
   },
   {
     "label": "Lachung (India)",

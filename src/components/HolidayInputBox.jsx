@@ -8,9 +8,11 @@ function HolidayInputBox(_props) {
      const inputRef = useRef(null);
      useEffect(() => {
           const handleClickOutside = (event) => {
-               if (inputRef.current && !inputRef.current.contains(event.target)) {
-                    setHolidayList([]);
-                    setQuery("");
+               if (!location.pathname.startsWith("/admin")) {
+                    if (inputRef.current && !inputRef.current.contains(event.target)) {
+                         setHolidayList([]);
+                         setQuery("");
+                    }
                }
           };
           document.addEventListener('mousedown', handleClickOutside);
@@ -59,7 +61,7 @@ function HolidayInputBox(_props) {
                          onFocusCapture={handleInputFocus}
                          onChange={(e) => handleQueryChange(e.target.value)}
                          onKeyDown={handleKeyDown}
-                         className={`w-full rounded focus:outline-0 ${_props.formType === "sm" ? "p-1" : "px-5 py-3"}`}
+                         className={`w-full rounded focus:outline-0 ${_props.inputClass ? _props.inputClass : ""} ${_props.formType === "sm" ? "px-3 py-1" : "px-5 py-3"}`}
                          placeholder="Where do you want to go?"
                     />
                     {holidayList && holidayList.length > 0 &&

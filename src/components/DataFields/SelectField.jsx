@@ -1,7 +1,7 @@
 import FieldLabel from "./FieldLabel"
 
 function SelectField(_props) {
-     const { containerClass, label, fieldType, children, value, updateValue, error, errorMessage } = _props
+     const { containerClass, label, fieldType, children, value, updateValue, error, errorMessage, required } = _props
      const handleUpdate = (e) => {
           updateValue(e.target.value)
      }
@@ -9,7 +9,7 @@ function SelectField(_props) {
           <>
 
                <div className={containerClass ? containerClass : ""}>
-                    <FieldLabel label={label} />
+                    <FieldLabel label={label} required={required} />
                     <select
                          value={value}
                          onChange={handleUpdate}

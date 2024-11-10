@@ -1,17 +1,22 @@
-import { useRecoilState } from "recoil"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import toast from "react-hot-toast"
-import { appName } from "../recoil"
 import PasswordField from "../components/DataFields/PasswordField"
 import InputField from "../components/DataFields/InputField"
 import SelectField from "../components/DataFields/SelectField"
 import InputMobile from "../components/DataFields/InputMobile"
 import { isPhoneValid } from "../components/OtherFunctions"
+import { EMAIL_REGEX } from "../config/constant"
+import { createUserWithEmailAndPassword } from "firebase/auth"
+import { auth } from "../config/firebase"
+import { useDispatch } from "react-redux"
+import { loginUser } from "../slices/userSlice"
 
 function Register() {
-     const [prefixAppName] = useRecoilState(appName)
-     const [details, setDetails] = useState({ salutation: "", firstName: "", lastName: "", email: "", mobileNumber: "", password: "", confirmPassword: "" })
+     const initialData = { salutation: "", firstName: "", lastName: "", email: "", mobileNumber: "", password: "", confirmPassword: "" }
+     const dispatch = useDispatch()
+     const navigate = useNavigate()
+     const [details, setDetails] = useState(initialData)
      const [formErrors, setFormErrors] = useState({})
      const handleUpdateDetails = (key, value) => {
           setFormErrors({})
@@ -19,7 +24,7 @@ function Register() {
                return { ...prev, [key]: value }
           })
      }
-     const handleRegister = () => {
+     const handleRegister = async () => {
           if (!details.salutation || details.salutation.trim() === "") {
                toast.error("Enter Salutation")
                setFormErrors({ salutation: true })
@@ -31,6 +36,9 @@ function Register() {
                setFormErrors({ lastName: true })
           } else if (!details.email || details.email.trim() === "") {
                toast.error("Enter E-Mail Address")
+               setFormErrors({ email: true })
+          } else if (!EMAIL_REGEX.test(details.email)) {
+               toast.error("Enter valid email.")
                setFormErrors({ email: true })
           } else if (!isPhoneValid(details.mobileNumber)) {
                toast.error("Enter valid Mobile Number")
@@ -44,8 +52,17 @@ function Register() {
           } else if (details.password !== details.confirmPassword) {
                toast.error("Password & Confirm Password doesn't matched.")
           } else {
-               toast.success("Registered Successfully!")
-               console.log(details)
+               try {
+                    const data = await createUserWithEmailAndPassword(auth, details.email, details.password);
+                    if (data) {
+                         dispatch(loginUser({ ...details, ...data.user, displayName: `${details.salutation}. ${details.firstName} ${details.lastName}`, phoneNumber: details.mobileNumber }))
+                         toast.success(`Registered Successfully! Welcome ${details.salutation}. ${details.firstName} ${details.lastName}!`)
+                         setDetails(initialData)
+                         navigate("/")
+                    }
+               } catch (error) {
+                    console.log(error);
+               }
           }
      }
      return (
@@ -54,7 +71,7 @@ function Register() {
                <div id="login-register-page" className="max-w-7xl mx-auto px-4 py-6">
                     <div className="shadow-lg rounded overflow-hidden grid grid-cols-2 items-center border">
                          <div className="image">
-                              <img src={`${prefixAppName}/images/banner/mid-banner.jpg`} alt="..." className="w-full aspect-square" />
+                              <img src={`/images/banner/mid-banner.jpg`} alt="..." className="w-full aspect-square" />
                          </div>
                          <div className="right-block p-4">
                               <div className="text-center text-5xl text-theme font-bold mb-6">
@@ -152,7 +169,7 @@ function Register() {
                                    </div>
                                    <div className="text-center">
                                         Already had a account?&nbsp;
-                                        <Link to={`${prefixAppName}/login`} className="font-semibold cursor-pointer text-sky-500 hover:text-theme">Login</Link>
+                                        <Link to={`/login`} className="font-semibold cursor-pointer text-sky-500 hover:text-theme">Login</Link>
                                    </div>
                               </div>
                          </div>

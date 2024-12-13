@@ -5,12 +5,11 @@ import { CiEdit, CiTrash } from "react-icons/ci";
 import { db } from "../../config/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteSingleHomeTour } from "../../slices/homeToursSlice";
-import { formatPrice } from "../../components/OtherFunctions";
 
 function HomeTours() {
      const dispatch = useDispatch()
      const { homeTours } = useSelector(state => state.homeTours)
-     const currencyData = useSelector(state => state.currencyData)
+     const { currency } = useSelector(state => state.settingsReducer)
      const deleteHomeTour = async (tourId) => {
           try {
                const tourRef = doc(db, 'homeTours', tourId);
@@ -49,7 +48,7 @@ function HomeTours() {
                                              <td className="px-3 py-2 border-b border-r">{idx + 1}</td>
                                              <td className="px-3 py-2 border-b border-r">{item.destination}</td>
                                              <td className="px-3 py-2 border-b border-r">{item.category}</td>
-                                             <td className="px-3 py-2 border-b border-r">{formatPrice(currencyData, item.startingPrice)}</td>
+                                             <td className="px-3 py-2 border-b border-r">{currency} {item.startingPrice}</td>
                                              <td className="px-3 py-2 border-b">
                                                   <div className="flex items-center gap-2">
                                                        <div className="cursor-pointer"><CiEdit size={15} className="text-green-500" /></div>

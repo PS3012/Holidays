@@ -5,6 +5,8 @@ import { doc, getDoc, getDocs, collection } from 'firebase/firestore';
 import { Route, Routes } from "react-router-dom"
 import 'react-alice-carousel/lib/alice-carousel.css';
 import 'react-international-phone/style.css';
+import 'ckeditor5/ckeditor5.css';
+import './App.css'
 import { db } from './config/firebase';
 import { updateContactData } from './slices/contactDataSlice';
 import { getAllThemes } from './slices/themeSlice';
@@ -30,7 +32,9 @@ import HomeTours from './pages/Admin/HomeTours';
 import AddHomeTour from './pages/Admin/AddHomeTour';
 import AdminLogin from './pages/Admin/AdminLogin';
 import Dashboard from './pages/Admin/Dashboard';
-import './App.css'
+import Settings from './pages/Admin/Settings';
+import ManagePackages from './pages/Admin/ManagePackages';
+import AddPackage from './pages/Admin/AddPackage';
 
 function App() {
   const dispatch = useDispatch()
@@ -106,6 +110,9 @@ function App() {
           <Route path="addDefaultDestination" element={<AddDefaultDestination />} />
           <Route path="manageHomeTours" element={<HomeTours />} />
           <Route path="addHomeTour" element={<AddHomeTour />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="managePackages" element={<ManagePackages />} />
+          <Route path="addPackage" element={<AddPackage />} />
           <Route path={`*`} element={<NotFound />} />
         </Route>
         <Route path="" element={<UserLayout />}>

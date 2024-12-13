@@ -1,10 +1,9 @@
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
-import { formatPrice } from "./OtherFunctions"
 
 function PackageCardType1(_props) {
      const { origin } = location
-     const currencyData = useSelector(state => state.currencyData)
+     const { settingsReducer: { currency } } = useSelector(state => state)
      return (
           <>
 
@@ -17,7 +16,7 @@ function PackageCardType1(_props) {
                               <div className="text-xl md:text-2xl font-bold mb-1">{_props.destination}</div>
                               <div className="text-sm md:text-base font-medium mb-2">Starting From</div>
                               <div className="text-lg md:text-xl font-bold">
-                                   {formatPrice(currencyData, _props.startingPrice)}
+                                   {currency} {_props.startingPrice}
                                    <span className="text-xs md:text-sm">&nbsp;/ Person</span>
                               </div>
                          </div>

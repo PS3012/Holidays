@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { CiSearch } from "react-icons/ci"
 import { IoIosHelpCircleOutline } from "react-icons/io"
 import { IoSettingsOutline } from "react-icons/io5"
@@ -26,9 +26,9 @@ function AdminHeader() {
                          <div className="w-8 h-8 grid place-items-center rounded-full cursor-pointer transition-colors duration-200 hover:bg-slate-300">
                               <IoIosHelpCircleOutline size={25} />
                          </div>
-                         <div className="w-8 h-8 grid place-items-center rounded-full cursor-pointer transition-colors duration-200 hover:bg-slate-300">
+                         <Link to="/admin/settings" className="w-8 h-8 grid place-items-center rounded-full cursor-pointer transition-colors duration-200 hover:bg-slate-300">
                               <IoSettingsOutline size={20} />
-                         </div>
+                         </Link>
                          <div className="w-8 h-8 relative inline-block text-left">
                               <button className="rounded-full overflow-hidden" onClick={() => setShow(prev => !prev)}>
                                    <PiUserCircleDashedFill size={32} />

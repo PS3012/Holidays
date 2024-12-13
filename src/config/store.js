@@ -4,7 +4,7 @@ import contactReducer from "../slices/contactDataSlice";
 import themeReducer from "../slices/themeSlice";
 import defaultDestinationsReducer from "../slices/defaultDestinationsSlice";
 import homeToursReducer from "../slices/homeToursSlice";
-import currencyDataReducer from "../slices/currencySlice";
+import settingsDataReducer from "../slices/settingsSlice";
 
 const store = configureStore({
   reducer: {
@@ -13,7 +13,7 @@ const store = configureStore({
     themes: themeReducer,
     defaultDestinations: defaultDestinationsReducer,
     homeTours: homeToursReducer,
-    currencyData: currencyDataReducer,
+    settingsReducer: settingsDataReducer,
   },
 });
 
